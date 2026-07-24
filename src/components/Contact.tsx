@@ -76,7 +76,7 @@ export default function Contact() {
 
             <a
               href={`https://wa.me/529812560780?text=${encodeURIComponent(
-                "Hola Angel, vi tu portafolio y me gustaría platicar."
+                "Hola Angel, vi tu portafolio y me interesa conversar sobre una posible colaboración o vacante. ¿Tienes disponibilidad?"
               )}`}
               target="_blank"
               rel="noopener noreferrer"

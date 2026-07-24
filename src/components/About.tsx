@@ -17,10 +17,11 @@ export default function About() {
         <div className="grid md:grid-cols-5 gap-10 md:gap-14">
           <div className="md:col-span-3 space-y-5 text-text-muted leading-relaxed">
             <p>
-              Soy ingeniero de software egresado con Mención Honorífica de la
-              Universidad Autónoma de Campeche. Desde 2023 diseño, construyo y
-              despliego aplicaciones full-stack y sistemas distribuidos para
-              instituciones gubernamentales federales y consultoría privada.
+              Soy ingeniero de software egresado de la Universidad Autónoma de
+              Campeche. Desde 2023 diseño, construyo y despliego aplicaciones
+              full-stack y sistemas distribuidos para instituciones
+              gubernamentales en el ámbito federal y estatal, y para la
+              consultoría privada.
             </p>
             <p>
               Trabajo de punta a punta: modelo la base de datos, construyo el
@@ -33,15 +34,16 @@ export default function About() {
             </p>
             <p>
               Actualmente colaboro con INFOTEC de forma remota desde Querétaro
-              y desarrollo soluciones tecnológicas a la medida para empresas
-              que necesitan software bien construido.
+              y desarrollo soluciones tecnológicas a la medida para
+              dependencias y organizaciones que necesitan software seguro y
+              bien construido.
             </p>
           </div>
 
           <div className="md:col-span-2 space-y-6">
             {Object.entries(skills).map(([category, items]) => (
               <div key={category}>
-                <h3 className="text-xs font-mono text-accent mb-3 capitalize tracking-wide">
+                <h3 className="text-xs font-mono text-accent mb-3 tracking-wide">
                   {category}
                 </h3>
                 <div className="flex flex-wrap gap-2">

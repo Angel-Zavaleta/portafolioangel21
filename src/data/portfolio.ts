@@ -10,7 +10,7 @@ export const personalInfo = {
   linkedin:
     "https://linkedin.com/in/angel-josue-zavaleta-utrera-592a2a28b",
   summary:
-    "Ingeniero de software con 3 años construyendo aplicaciones full-stack y arquitecturas de microservicios para el gobierno federal mexicano y consultoría privada. Del modelo de datos al despliegue: React, Node/Bun, PHP/Laravel y Python — con la seguridad y la identidad (OAuth 2.0, SSO, RBAC, JWT) como parte del ADN de cada sistema.",
+    "Ingeniero de software con 3 años construyendo aplicaciones full-stack y arquitecturas de microservicios para el sector público federal y la consultoría privada. Del modelo de datos al despliegue: React, Node/Bun, PHP/Laravel y Python — con la seguridad y la identidad (OAuth 2.0, SSO, RBAC, JWT) como parte del ADN de cada sistema.",
 };
 
 export const experiences = [
@@ -25,7 +25,7 @@ export const experiences = [
         name: "Plataforma de captura de datos en campo · En producción",
         client: "Dependencia federal",
         description:
-          "Plataforma offline-first para captura casa por casa con turnado automático a dependencias. La construí desde cero aplicando principios SOLID y una arquitectura de microservicios mantenible. Autenticación SSO con Llave MX, RBAC y aislamiento de datos por institución.",
+          "Plataforma offline-first para captura casa por casa con turnado automático a dependencias. La diseñé y desarrollé de extremo a extremo, aplicando principios SOLID y una arquitectura de microservicios mantenible. Autenticación SSO con Llave MX, RBAC y aislamiento de datos por institución.",
         stack: [
           "React 18",
           "Bun/Elysia",
@@ -36,30 +36,32 @@ export const experiences = [
         ],
       },
       {
-        name: "Digitalización inteligente de documentos con IA",
+        name: "Digitalización de expedientes con IA",
         client: "Instituto federal",
         description:
-          "Pipeline de OCR e IA (4 modelos en cadena) para digitalizar expedientes extensos. Reduje la tasa de fallo de 29% a 0% y construí la sincronización de usuarios y roles con Llave MX (OAuth 2.0 + PKCE). Diseño orientado a la resiliencia: reintentos, colas y monitoreo.",
+          "Automatiza la digitalización de expedientes extensos que antes se capturaban a mano. Diseñé la arquitectura, el modelo de base de datos y el gateway que orquesta 4 modelos de IA, más la tolerancia a fallos, la optimización y una cola virtual de procesamiento (estilo Ticketmaster), el panel administrativo y el despliegue en servidor. Trabajo colaborativo; front en React/Mantine a partir de diseños en Figma. Elevé la confiabilidad del pipeline de 29% de fallos a 0%.",
         stack: [
           "Python",
           "FastAPI",
           "Celery",
           "Redis",
+          "React/Mantine",
           "Llave MX",
-          "Docker",
+          "RBAC",
+          "Figma",
         ],
       },
       {
         name: "Sistema nacional de gestión de reuniones",
         client: "Dependencia federal",
         description:
-          "Plataforma nacional con apps offline-first, SSO con Llave MX y RBAC por territorio. Tablero con mapas interactivos y generación automática de reportes. Arquitectura de microservicios enfocada en la mantenibilidad y las pruebas.",
+          "Plataforma nacional para el registro de reuniones de seguridad. Desarrollé la API y la PWA de registro (offline-first), integradas a un backoffice de concentrado web, con SSO Llave MX y RBAC. Resolví diversas incidencias del cliente. Proyecto de 5 colaboradores, próximo a salir a producción.",
         stack: [
-          "React 18",
+          "React",
           "Bun/Elysia",
           "PostgreSQL 16",
           "Llave MX",
-          "Kubernetes",
+          "RBAC",
           "Docker",
         ],
       },
@@ -121,7 +123,7 @@ export const experiences = [
 
 export const projects = [
   {
-    title: "Comanda AI",
+    title: "OrderFlow",
     subtitle: "Pedidos por WhatsApp con IA conversacional",
     description:
       "Chatbot conversacional (WhatsApp/Messenger) que automatiza pedidos de restaurante con dictado por voz (Gemini AI) y tablero en tiempo real. Construido con una arquitectura limpia y modular.",
@@ -135,7 +137,7 @@ export const projects = [
       "Gemini AI",
     ],
     github: "https://github.com/Angel-Zavaleta/restaurante-pwa",
-    image: "/projects/cero-teclado.png",
+    image: "/projects/orderflow.png",
   },
 ];
 
@@ -156,7 +158,7 @@ export const services = [
     icon: "server",
     title: "Arquitectura de Software",
     description:
-      "Diseño de arquitecturas de microservicios, sistemas distribuidos y pipelines de datos con Docker, CI/CD y monitoreo.",
+      "Diseño de arquitecturas de microservicios y sistemas distribuidos aplicando principios SOLID, con Docker y monitoreo.",
   },
   {
     icon: "smartphone",
@@ -174,12 +176,12 @@ export const services = [
     icon: "cloud",
     title: "Despliegue y Mantenimiento",
     description:
-      "Puesta en producción con Docker, Nginx, SSL y CI/CD, más soporte técnico y mejora continua.",
+      "Acompaño el ciclo completo, del alta de requerimientos a la puesta en producción con Docker, Nginx y SSL, más soporte técnico y mejora continua.",
   },
 ];
 
 export const skills = {
-  backend: [
+  Backend: [
     "Python",
     "FastAPI",
     "PHP/Laravel",
@@ -187,24 +189,17 @@ export const skills = {
     "Bun/Elysia",
     "Express",
   ],
-  frontend: [
+  Frontend: [
     "React",
     "Vue.js",
     "TypeScript",
     "Tailwind CSS",
-    "Inertia.js",
+    "Mantine",
     "PWA",
   ],
-  databases: ["PostgreSQL", "MySQL", "Redis", "Prisma", "Drizzle ORM"],
-  infra: [
-    "Docker",
-    "Kubernetes",
-    "Nginx",
-    "GitHub Actions",
-    "Prometheus",
-    "Grafana",
-  ],
-  "identidad & seguridad": [
+  "Bases de datos": ["PostgreSQL", "MySQL", "Redis", "Drizzle ORM", "Prisma"],
+  Infraestructura: ["Docker", "Nginx", "Git / GitLab", "Prometheus", "Grafana"],
+  "Identidad & Seguridad": [
     "OAuth 2.0",
     "OpenID Connect",
     "SSO / Llave MX",
@@ -213,5 +208,12 @@ export const skills = {
     "2FA",
     "OWASP",
     "ISO 27001",
+  ],
+  "IA & Herramientas": [
+    "Claude",
+    "GitHub Copilot",
+    "OpenCode",
+    "Agentes de IA",
+    "Figma",
   ],
 };
