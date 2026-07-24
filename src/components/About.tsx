@@ -33,8 +33,8 @@ export default function About() {
               con Llave MX, RBAC, JWT).
             </p>
             <p>
-              Actualmente colaboro con INFOTEC de forma remota desde Querétaro
-              y desarrollo soluciones tecnológicas a la medida para
+              Actualmente colaboro con INFOTEC de forma remota y desarrollo
+              soluciones tecnológicas a la medida para
               dependencias y organizaciones que necesitan software seguro y
               bien construido.
             </p>

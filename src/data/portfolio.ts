@@ -5,7 +5,7 @@ export const personalInfo = {
   subtitle: "Software Architect",
   email: "angel21zavaleta@gmail.com",
   phone: "+52 981 256 0780",
-  location: "Querétaro, México",
+  location: "Remoto · México",
   github: "https://github.com/Angel-Zavaleta",
   linkedin:
     "https://linkedin.com/in/angel-josue-zavaleta-utrera-592a2a28b",
@@ -25,7 +25,7 @@ export const experiences = [
         name: "Plataforma de captura de datos en campo · En producción",
         client: "Dependencia federal",
         description:
-          "Plataforma offline-first para captura casa por casa con turnado automático a dependencias. La diseñé y desarrollé de extremo a extremo, aplicando principios SOLID y una arquitectura de microservicios mantenible. Autenticación SSO con Llave MX, RBAC y aislamiento de datos por institución.",
+          "Plataforma offline-first para captura y seguimiento de casos en campo, con enrutamiento automático a las áreas correspondientes. La diseñé y desarrollé de extremo a extremo, aplicando principios SOLID y una arquitectura de microservicios mantenible. Autenticación SSO con Llave MX, RBAC y aislamiento de datos por institución.",
         stack: [
           "React 18",
           "Bun/Elysia",
@@ -55,7 +55,7 @@ export const experiences = [
         name: "Sistema nacional de gestión de reuniones",
         client: "Dependencia federal",
         description:
-          "Plataforma nacional para el registro de reuniones de seguridad. Desarrollé la API y la PWA de registro (offline-first), integradas a un backoffice de concentrado web, con SSO Llave MX y RBAC. Resolví diversas incidencias del cliente. Proyecto de 5 colaboradores, próximo a salir a producción.",
+          "Plataforma nacional para el registro y seguimiento de reuniones institucionales. Desarrollé la API y la PWA de registro (offline-first), integradas a un backoffice de concentrado web, con SSO Llave MX y RBAC. Resolví diversas incidencias del cliente. Proyecto de 5 colaboradores, próximo a salir a producción.",
         stack: [
           "React",
           "Bun/Elysia",
@@ -66,10 +66,10 @@ export const experiences = [
         ],
       },
       {
-        name: "MVP de gestión de incidencias y alertas",
+        name: "MVP de servicio de autenticación y autorización",
         client: "Organismo federal",
         description:
-          "MVP de un servicio de autenticación y autorización centralizado, desarrollado bajo controles ISO/IEC 27001. SSO con Llave MX y JWT RS256, RBAC granular y bitácora de auditoría. Optimicé el flujo de login de 8s a 500ms (−93%).",
+          "Servicio de autenticación y autorización centralizado (MVP) desarrollado bajo controles ISO/IEC 27001. SSO con Llave MX y JWT RS256, RBAC granular y bitácora de auditoría. Optimicé el flujo de login de 8s a 500ms (−93%).",
         stack: [
           "Laravel 12",
           "Llave MX",
