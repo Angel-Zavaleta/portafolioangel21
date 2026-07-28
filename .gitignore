@@ -10,3 +10,8 @@ npm-debug.log*
 
 # Build cache
 tsconfig.tsbuildinfo
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
