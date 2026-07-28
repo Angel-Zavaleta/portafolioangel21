@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { personalInfo } from "../data/portfolio";
 import { useState, type FormEvent } from "react";
+import Reveal from "./Reveal";
 
 // 1) Crea una cuenta gratis en https://web3forms.com (solo pide tu email)
 // 2) Copia tu Access Key y pégala aquí abajo:
@@ -36,17 +37,19 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 px-6 sm:px-8">
       <div className="max-w-5xl mx-auto">
-        <div className="mb-12">
-          <span className="font-mono text-accent text-sm tracking-widest">
-            05
-          </span>
-          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-text mt-2">
-            Contacto
-          </h2>
-          <div className="mt-4 h-px w-14 bg-accent/70" />
-        </div>
+        <Reveal>
+          <div className="mb-12">
+            <span className="font-mono text-accent text-sm tracking-widest">
+              05
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-text mt-2">
+              Contacto
+            </h2>
+            <div className="mt-4 h-px w-14 bg-accent/70" />
+          </div>
+        </Reveal>
 
-        <div className="grid md:grid-cols-2 gap-10 md:gap-14">
+        <Reveal delay={80} className="grid md:grid-cols-2 gap-10 md:gap-14">
           <div className="space-y-6">
             <p className="text-text-muted leading-relaxed">
               ¿Tienes un proyecto en mente o una vacante que encaje con mi
@@ -167,7 +170,7 @@ export default function Contact() {
               </div>
             )}
           </form>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

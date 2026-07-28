@@ -15,15 +15,24 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto w-full max-w-4xl py-28 sm:py-32">
-        <p className="font-mono text-accent text-xs sm:text-sm tracking-widest uppercase mb-5">
+        <p
+          className="rise font-mono text-accent text-xs sm:text-sm tracking-widest uppercase mb-5"
+          style={{ animationDelay: "0ms" }}
+        >
           Hola, soy
         </p>
 
-        <h1 className="font-display font-semibold text-text leading-[1.05] text-5xl sm:text-7xl mb-6">
+        <h1
+          className="rise font-display font-semibold text-text leading-[1.05] text-5xl sm:text-7xl mb-6"
+          style={{ animationDelay: "90ms" }}
+        >
           {personalInfo.fullName}
         </h1>
 
-        <h2 className="text-text-muted text-xl sm:text-3xl font-light mb-8">
+        <h2
+          className="rise text-text-muted text-xl sm:text-3xl font-light mb-8"
+          style={{ animationDelay: "180ms" }}
+        >
           <span className="text-text font-normal">{personalInfo.title}</span>
           <span className="text-accent mx-2">·</span>
           <span className="text-text font-normal">
@@ -31,27 +40,36 @@ export default function Hero() {
           </span>
         </h2>
 
-        <p className="text-text-muted text-base sm:text-lg max-w-2xl leading-relaxed mb-10">
+        <p
+          className="rise text-text-muted text-base sm:text-lg max-w-2xl leading-relaxed mb-10"
+          style={{ animationDelay: "270ms" }}
+        >
           {personalInfo.summary}
         </p>
 
-        <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-14">
+        <div
+          className="rise flex flex-col sm:flex-row sm:items-center gap-4 mb-14"
+          style={{ animationDelay: "360ms" }}
+        >
           <a
             href="#projects"
-            className="inline-flex items-center justify-center px-7 py-3.5 bg-accent text-primary font-semibold rounded-lg hover:bg-accent-hover transition-colors shadow-lg shadow-accent/20"
+            className="inline-flex items-center justify-center px-7 py-3.5 bg-accent text-primary font-semibold rounded-lg transition-colors duration-200 ease-out hover:bg-accent-hover shadow-lg shadow-accent/20"
           >
             Ver proyectos
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-line text-text rounded-lg hover:border-accent hover:text-accent transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-line text-text rounded-lg transition-colors duration-200 ease-out hover:border-accent hover:text-accent"
           >
             <Mail size={18} />
             Contáctame
           </a>
         </div>
 
-        <div className="flex items-center gap-5">
+        <div
+          className="rise flex items-center gap-5"
+          style={{ animationDelay: "450ms" }}
+        >
           <a
             href={personalInfo.github}
             target="_blank"

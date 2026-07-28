@@ -2,13 +2,13 @@
 
 @theme {
   /* Paleta "Arquitecto Cálido" — carbón + marfil + oro */
-  --color-primary: #1c1917; /* fondo carbón cálido */
-  --color-secondary: #262220; /* superficies / cards */
-  --color-line: #3a332e; /* bordes */
-  --color-accent: #f59e0b; /* oro / ámbar */
-  --color-accent-hover: #d97706; /* ámbar oscuro */
-  --color-text: #fafaf9; /* marfil */
-  --color-text-muted: #a8a29e; /* piedra */
+  --color-primary: #1c1917;
+  --color-secondary: #262220;
+  --color-line: #3a332e;
+  --color-accent: #f59e0b;
+  --color-accent-hover: #d97706;
+  --color-text: #fafaf9;
+  --color-text-muted: #a8a29e;
 
   /* Tipografía */
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -26,9 +26,21 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  text-wrap: pretty;
 }
 
-/* Selección de texto en oro */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+/* Números que se alinean (métricas, años) */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Selección en oro */
 ::selection {
   background-color: var(--color-accent);
   color: #1c1917;
@@ -38,7 +50,7 @@ body {
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 /* Scrollbar cálido */
@@ -55,4 +67,65 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent);
+}
+
+/* ---------- Movimiento / craft ---------- */
+/* Curva ease-out (expo) para entradas — se siente premium */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Entrada escalonada del hero al cargar */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  opacity: 0;
+  animation: rise 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Tarjetas: sombra suave semitransparente en vez de borde plano (Emil) */
+.card {
+  transition:
+    box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.22s ease-out;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 50px -22px rgba(0, 0, 0, 0.65);
+}
+
+/* Respeta a quien pide menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .rise {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  .card {
+    transition: none;
+  }
 }
